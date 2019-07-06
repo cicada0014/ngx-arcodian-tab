@@ -119,6 +119,76 @@
           }
         }
       }
+    },
+    "ngx-arcodian-tabs": {
+      "projectType": "library",
+      "root": "projects/ngx-arcodian-tabs",
+      "sourceRoot": "projects/ngx-arcodian-tabs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-arcodian-tabs/tsconfig.lib.json",
+            "project": "projects/ngx-arcodian-tabs/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-arcodian-tabs/src/test.ts",
+            "tsConfig": "projects/ngx-arcodian-tabs/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-arcodian-tabs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-arcodian-tabs/tsconfig.lib.json",
+              "projects/ngx-arcodian-tabs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-arcodian-tab": {
+      "projectType": "library",
+      "root": "projects/ngx-arcodian-tab",
+      "sourceRoot": "projects/ngx-arcodian-tab/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-arcodian-tab/tsconfig.lib.json",
+            "project": "projects/ngx-arcodian-tab/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-arcodian-tab/src/test.ts",
+            "tsConfig": "projects/ngx-arcodian-tab/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-arcodian-tab/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-arcodian-tab/tsconfig.lib.json",
+              "projects/ngx-arcodian-tab/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "module-factory"
 }

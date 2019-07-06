@@ -1,0 +1,40 @@
+<div class="tabs-wrapper">
+    <div class="tab-rows">
+        <div [id]="'tab-row'+rowIndex" class=tab-row *ngFor="let tabRow of convertedTabs ; let rowIndex = index "
+            [ngStyle]="{'height':rowHeight +'px'}">
+            <div *ngFor="let tab of tabRow ; let tabIndex = index"
+                [ngClass]="{'active': tabIndexForSelectedTab == tabIndex + (rowIndex *columnCount) , 'row-end' : tabIndex  % columnCount == columnCount -1  }"
+                [ngStyle]="{'height':rowHeight +'px' , 'width' : 100 / tabRow.length + '%' }" class="tab"
+                [id]="'tab'+ (tabIndex + (rowIndex *columnCount)  ) "
+                (click)="clickTab(tab, tabIndex + (rowIndex *columnCount) ,rowIndex )">
+                <span>
+                    {{tab.label}}
+                </span>
+                <span
+                    [ngClass]="{'custom-up-white-icon': tabIndexForSelectedTab == tabIndex + (rowIndex *columnCount) , 'custom-down-black-icon' : tabIndexForSelectedTab != tabIndex + (rowIndex *columnCount)}">
+                </span>
+            </div>
+            <div [id]="'ngx-arcodian-tab-content' + rowIndex ">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="content-target" [ngClass]="{'none': isNoneTabContent   }">
+    <ng-container>
+        <ng-content>
+        </ng-content>
+    </ng-container>
+</div>
+
+
+
+<!-- <div id="ngx-arcodian-tab-content" class="tab-content">
+    123123123131
+  </div> -->
+
+<!-- <ng-content id="ngx-arcodian-tab-content" #name>
+  
+  </ng-content> -->

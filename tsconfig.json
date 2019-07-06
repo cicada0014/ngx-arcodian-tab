@@ -18,6 +18,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-arcodian-tabs": [
+        "dist/ngx-arcodian-tabs"
+      ],
+      "ngx-arcodian-tabs/*": [
+        "dist/ngx-arcodian-tabs/*"
+      ],
+      "ngx-arcodian-tab": [
+        "dist/ngx-arcodian-tab"
+      ],
+      "ngx-arcodian-tab/*": [
+        "dist/ngx-arcodian-tab/*"
+      ]
+    }
   }
 }

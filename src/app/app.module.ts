@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { NgxArcodianTabsModule } from 'ngx-arcodian-tabs/dist'
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxArcodianTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
